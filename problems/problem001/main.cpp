@@ -23,13 +23,13 @@ int main() {
     cin >> quant;
 
     if (num == 1)
-      total = total + (quant*7.5);
+      total += quant*7.5;
     else if (num == 2)
-      total = total + (quant*2.35);
+      total += quant*2.35;
     else if (num == 3)
-      total = total + (quant*13.40);
+      total += quant*13.40;
     else if (num == 4)
-      total = total + (quant*15);
+      total += quant*15;
     else
       cout << "Pedido Inválido!" << endl;
 
