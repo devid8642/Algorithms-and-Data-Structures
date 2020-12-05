@@ -1,0 +1,1 @@
+Faça um algoritmo que leia um número inteiro e mostre na tela a sua tabuada de 1 a 10. (TODAS AS OPERAÇÕES)
