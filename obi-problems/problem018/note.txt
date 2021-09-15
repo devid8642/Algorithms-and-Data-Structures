@@ -1,0 +1,1 @@
+Para entradas muito grandes ele resulta em "time limit exceded".
