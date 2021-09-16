@@ -7,5 +7,5 @@ Directory is dedicated to general troubleshooting.
 ### OBI Problems
 Directory dedicated to the solution of problems of OBI (Brazilian Olympics of Informatics).
 
-### Studies OBI
-Directory dedicated to the study of data structures and algorithms for OBI (Brazilian Olympics of Informatics).
+### Classical Algorithms and Data Structures
+Implementation of classical computer science algorithms and data structure.
