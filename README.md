@@ -1,5 +1,5 @@
 # Programming-Logic
-Repository dedicated to studies of programming logic, algorithm and data structure in C/C++, Python and other languages.
+Repository dedicated to programming logic, algorithms and data structure in C/C++, Python and other languages.
 
 ### Problems
 Directory is dedicated to general troubleshooting.
