@@ -3,6 +3,9 @@
  */
 #include <stdio.h>
 
+/*
+ * A função recebe um vetor v[0..n-1] e devolve um elemento máximo de v.
+ */
 int maximo(int v[], int n) {
   int x = v[0];
   for (int i = 1; i < n; i++)
