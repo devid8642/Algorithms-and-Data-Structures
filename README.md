@@ -19,3 +19,8 @@
 ## problemXXX
 <p>In this branch I work on general problems where my solution did not reach 100 points.</p>
 <p>Neste ramo eu trabalho em problemas gerais em que minha solução não atingiu 100 pontos.</p>
+
+<br><br>
+
+<p align="center"><b>"Always remember who you are and where you are."</b></p>
+<p align="center"><i>Tommy Shelby</i></p>
