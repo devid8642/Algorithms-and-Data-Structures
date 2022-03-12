@@ -21,9 +21,9 @@ int main() {
             int tmp = 0;
 
             for (int i = 0; i < c; i++) {
-                if (clientes.top().first > time + tmp)
+                if (clientes.empty() || clientes.top().first > time + tmp)
                     break;
-                if (time - clientes.top().first >= 20)
+                if (time - clientes.top().first > 20)
                     resp++;
                 if (i == 0) {
                     tmp += clientes.top().second;
