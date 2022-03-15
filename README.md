@@ -2,9 +2,13 @@
 <p>Repository dedicated to programming logic, algorithms and data structure in C/C++, Python and other languages.</p>
 <p>Repositório dedicado à lógica de programação, algoritmos e estrutura de dados em C/C++, Python e outras linguagens.</p>
 
+### Algorithms
+<p>Directory dedicated to the implementation of the main algorithms (sorting, searching, etc).</p>
+<p>Diretório dedicado a implementação dos principais algoritmos (ordenação, busca etc).</p>
+
 ### Problems
 <p>Directory is dedicated to general troubleshooting.</p>
-<p>O diretório é dedicado à solução de problemas gerais</p>
+<p>Diretório é dedicado à solução de problemas gerais</p>
 
 ### OBI Problems
 <p>Directory dedicated to the solution of problems of <a href="https://olimpiada.ic.unicamp.br/" target="_blank" rel="noreferrer noopener">OBI</a> (Brazilian Olympics of Informatics).</p>
