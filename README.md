@@ -24,6 +24,10 @@
 <p>In this branch I work on general problems where my solution did not reach 100 points.</p>
 <p>Neste ramo eu trabalho em problemas gerais em que minha solução não atingiu 100 pontos.</p>
 
+## algorithms
+<p>In this branch I work on the implementation of the main types of algorithms.</p>
+<p>Neste ramo eu trabalho na implementação dos principais tipos de algoritmos.</p>
+
 <br><br>
 
 <p align="center"><b>"Always remember who you are and where you are."</b></p>
