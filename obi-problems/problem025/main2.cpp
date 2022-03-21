@@ -12,6 +12,4 @@ int main(){
 
   cout << t1 << endl;
   cout << t2 << endl;
-  
-  return 0;
 }
