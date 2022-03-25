@@ -28,7 +28,6 @@ int main() {
         int tam = botas_d[i];
 
         for (int j = 0; j < (int)botas_e.size(); j++) {
-            cout << botas_e[j] << " ";
             if (tam == botas_e[j]) {
                 cont++;
                 botas_e.erase(botas_e.begin()+j, botas_e.begin()+j);
@@ -39,7 +38,6 @@ int main() {
                     break;
             }
         }
-        cout << endl;
     }
 
     cout << cont << endl;
