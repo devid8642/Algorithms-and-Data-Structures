@@ -24,7 +24,7 @@ int main() {
     sort(botas_d.begin(), botas_d.end());
     sort(botas_e.begin(), botas_e.end());
 
-    for (int i = 0; i < n/2; i++) {
+    for (int i = 0; i < (int)botas_d.size(); i++) {
         int tam = botas_d[i];
 
         for (int j = 0; j < (int)botas_e.size(); j++) {
