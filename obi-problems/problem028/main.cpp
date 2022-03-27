@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     int n, cont = 0;
     vector<int> botas_d;
-    vector<int> botas_e;
+    vector<pair<int, bool>> botas_e;
 
     cin >> n;
 
@@ -18,7 +18,7 @@ int main() {
         if (c == 'D')
             botas_d.push_back(x);
         else
-            botas_e.push_back(x);
+            botas_e.push_back({x, false});
     }
 
     sort(botas_d.begin(), botas_d.end());
@@ -28,13 +28,13 @@ int main() {
         int tam = botas_d[i];
 
         for (int j = 0; j < (int)botas_e.size(); j++) {
-            if (tam == botas_e[j]) {
+            if (tam == botas_e[j].first && botas_e[j].second == false) {
                 cont++;
-                botas_e.erase(botas_e.begin()+j, botas_e.begin()+j);
+                botas_e[j].second = true;
                 break;
             }
             else {
-                if (botas_e[j] > tam)
+                if (botas_e[j].first > tam)
                     break;
             }
         }
