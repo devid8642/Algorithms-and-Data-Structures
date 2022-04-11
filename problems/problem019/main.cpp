@@ -52,14 +52,8 @@ int main() {
                         continue;
                     }
                     else {
-                        if (num.top() == 0) {
-                            num.pop();
-                            continue;
-                        }
-                        else {
-                            n_num.push(num.top());
-                            num.pop();
-                        }
+                        n_num.push(num.top());
+                        num.pop();
                     }
                 }
             }
