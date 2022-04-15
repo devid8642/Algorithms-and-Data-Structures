@@ -3,11 +3,22 @@
 using namespace std;
 
 int main() {
-    int c, n, time = 0, resp = 0;
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int,  int>>> clientes;
-    vector<int> caixas;
+    int c, n, resp = 0;
+    vector<pair<int, int>> clientes;
+    priority_queue<int, vector<int>, greater<int>> caixas;
 
     cin >> c >> n;
+
+    for (int i = 0; i < n; i++) {
+        int t, d;
+
+        cin >> t >> d;
+
+        clientes.push_back({t, d});
+    }
+
+    for (int i = 0; i < c; i++)
+        caixas.push(0);
 
     if (c >= n) {
         cout << 0 << endl;
@@ -15,35 +26,17 @@ int main() {
     }
 
     for (int i = 0; i < n; i++) {
-        int t, d;
-        
-        cin >> t >> d;
+        int t = clientes[i].first;
+        int d = clientes[i].second;
 
-        clientes.push({t, d});
-        caixas.push_back(0);
-    }
-    
-    while (!clientes.empty()) {
-        for (int i = 0 ; i < c; i++) {
-            if (clientes.empty())
-                break;
-            
-            int t = clientes.top().first;
-            int d = clientes.top().second;
+       if (caixas.top() - t > 20)
+           resp++;
 
-            if (caixas[i] - t > 20)
-                resp++;
-
-            if (t <= caixas[i])
-                caixas[i] += d;
-            else
-                caixas[i] += t + d;
-
-            clientes.pop();
-        }
+        caixas.push(max(caixas.top(), t)+d);
+        caixas.pop();
     }
 
     cout << resp << endl;
-    
+
     return 0;
 }
