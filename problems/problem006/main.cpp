@@ -1,38 +1,38 @@
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
 int main() {
-  float num;
+	int n, p, tot = 0;
+	vector<int> chocolates;
 
-  cout << "Digite um número: ";
-  cin >> num;
+	cin >> n;
 
-  cout << "TABUADA DA ADIÇÃO" << endl;
+	for (int i = 0; i < n; i++) {
+		cin >> p;
+		chocolates.push_back(p);
+	}
+		
 
-  // ADIÇÃO
-  for (int i = 0; i <= 10; i++)
-    cout << num << " + " << i << " = " << num+i << endl;
+	sort(chocolates.rbegin(), chocolates.rend());
 
-  cout << "TABUADA DA SUBTRAÇÃO" << endl;
+	while (!(chocolates.empty())) {
 
-  // SUBTRAÇÃO
-  for (int i = 0; i <= 10; i++)
-    cout << num << " - " << i << " = " << num-i << endl;
+		if ((int)chocolates.size() >= 3) {
+			tot += chocolates[0];
+			tot += chocolates[1];
+			chocolates.erase(chocolates.begin(), chocolates.begin()+3);
+		}
+		else {
+			tot += chocolates[0];
+			chocolates.erase(chocolates.begin());
+		}
+		
+	}
 
-  cout << "TABUADA DA MULTIPLICAÇÃO" << endl;
+	cout << tot << endl;
 
-  // MULTIPLICAÇÃO
-  for (int i = 0; i <= 10; i++)
-    cout << num << " x " << i << " = " << num*i << endl;
-
-  cout << "TABUADA DA DIVISÃO" << endl;
-
-  // DIVISÃO
-  for (int i = 1; i <= 10; i++)
-    cout << num << " / " << i << " = " << num/i << endl;
-
-
-  return 0;
-
+	return 0;
 }

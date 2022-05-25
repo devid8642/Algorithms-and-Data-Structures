@@ -1,3 +1,1 @@
-Faça um algoritmo para ler e escrever o Nome, idade e sexo de um número indeterminado de alunos. Ao
-final escreva o total de alunos lidos, o total do sexo masculino, o total do sexo feminino, a media de idade, a
-maior idade e a menor idade. O algoritmo só irá parar quando o usuário digitar sair.
+Problem: https://olimpiada.ic.unicamp.br/pratique/pj/2019/f2/copos/

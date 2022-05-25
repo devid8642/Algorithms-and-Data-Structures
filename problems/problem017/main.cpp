@@ -3,21 +3,26 @@
 using namespace std;
 
 int main() {
-	int n;
+	int a, b;
 
-	cout << "Informe o número: ";
-	cin >> n;
+	cin >> a >> b;
 
-
-	for (int j = n; j > 0; j--) {
-		for (int i = j; i > 0; i--) {
-			cout << i << " ";
+	for (int i = 1; i <= a-6; i++) {
+		int c = (a-(2*i))/2;
+		int h = i+2;
+		if ((c*h)-a == b) {
+			if (c > h)
+				cout << h << " " << c << endl;
+			else if (c < h)
+				cout << c << " " << h << endl;
+			else
+				cout << c << " " << h << endl;
+			return 0;
 		}
-		cout << endl;
+
 	}
 
-	cout << endl;
+	cout << -1 << " " << -1 << endl;
 
 	return 0;
-
 }

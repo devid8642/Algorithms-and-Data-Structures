@@ -1,7 +1,1 @@
-Um carro quebrou e precisou ir para um conserto. Faça um algoritmo que leia a
-quantidade de peças que foram quebradas e as que foram danificadas, mas podem ser renovadas. Para
-calcular os gastos, cada peça quebrada para trocar vale 100,00 R$ e para cada peça que pode ser
-consertada vale 55,60 R$ por peça. No final, exiba o total gasto. Se o total gasto for maior que ou
-igual a 1000,00 R$, deve receber um desconto de 20%, se for maior que ou igual a 1500,00 R$, deve
-receber um desconto de 30%, se for maior que ou igual a 2000,00 R$, deve receber um desconto de
-35%. Se o valor for menor que 1000,00 R$, deve pagar um aumento de 8% do valor total.
+Problem: https://olimpiada.ic.unicamp.br/pratique/p1/2020/f1/pandemia/

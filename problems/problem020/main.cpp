@@ -1,24 +1,44 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main() {
-    int a, b, c;
-    int x, y, z;
-    int tot = 0;
+	int a, b, cad_a, cad_b;
+	int cadeiras[] = {1, 2, 0};
+	int pos = 0;
 
-    cin >> a >> b >> c;
-    cin >> x >> y >> z;
+	cin >> a >> b;
+	
+	for (int i = 0; i < a; i++) {
+		cad_a = cadeiras[pos];
+		pos++;
+		if (pos > 2)
+			pos = 0;
+	}
+	
+	pos = 0;
 
-    if (a < x)
-        tot += x - a;
-    if (b < y)
-        tot += y - b;
-    if (c < z)
-        tot += z - c;
+	for (int i = 0; i < b; i++) {
+		cad_b = cadeiras[pos];
+		pos++;
+		if (pos > 2)
+			pos = 0;
+	}
 
-    cout << tot << endl;
+	if (cad_a == cad_b) {
+		if (pos < 2)
+			cad_b = cadeiras[pos++];
+		else
+			cad_b = 0;
+	}
 
-    return 0;
+	for (int i = 0; i < 3; i++) {
+		if (cadeiras[i] == cad_a || cadeiras[i] == cad_b)
+			continue;
+		else
+			cout << cadeiras[i] << endl;
+	}
+	
+	return 0;
 
 }

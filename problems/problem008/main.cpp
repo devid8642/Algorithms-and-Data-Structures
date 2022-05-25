@@ -1,25 +1,18 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main() {
-  int n;
-  int p = 0;
-  int i = 0;
+	int n, tot;
 
-  for (int c = 0; c < 10; c++) {
-    cout << "Digite um número: ";
-    cin >> n;
+	cin >> n;
 
-    if (n % 2 == 0)
-      p++;
-    else
-      i++;
-  }
+	tot = (n+2)*(n+1)/2;
 
-  cout << "Você digitou " << p << " números pares." << endl;
-  cout << "Você digitou " << i << " números ímpares." << endl;
 
-  return 0;
+	cout << tot << endl;
 
+
+	return 0;
 }

@@ -3,16 +3,24 @@
 using namespace std;
 
 int main() {
-  int n, s = 0;
+	int m, a, b, c;
 
-  cout << "Digite um número: ";
-  cin >> n;
+	cin >> m >> a >> b;
 
-  for (int i = 1; i <= n; i++)
-    s += i;
+	c = m-(a+b);
 
-  cout << "A soma de todos os números de 1 ate " << n << " vale: " << s << endl;
+	if (a > b) {
+		if (a > c)
+			cout << a << endl;
+		else
+			cout << c << endl;
+	}
+	else {
+		if (b > c)
+			cout << b << endl;
+		else
+			cout << c << endl;
+	}
 
-  return 0;
-
+	return 0;
 }

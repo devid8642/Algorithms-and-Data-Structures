@@ -1,0 +1,3 @@
+Faça um algoritmo que leia a temperatura atual em graus celsius. Deve aparecer na tela
+seguindo as seguintes condições: muito frio (se for até 15), frio (se for entre 16 até 23), agradável (se
+for entre 24 até 26), calor (se for entre 27 até 30), muito quente (se for maior que 31).

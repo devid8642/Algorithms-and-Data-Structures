@@ -1,34 +1,45 @@
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int main() {
-  float break_quant, danif_quant, total;
+	int n, m, i, r, a, id;
+	set<int> infec;
+	set<int> partic;
+	set<int>::iterator it;
 
-  cout << "Quantas peças foram QUEBRADAS? ";
-  cin >> break_quant;
-  cout << "Quantas peças foram DANIFICADAS? ";
-  cin >> danif_quant;
+	cin >> n >> m;
+	cin >> i >> r;
 
-  total = break_quant*100 + danif_quant*55.60;
+	infec.insert(i);
 
-  if (total >= 1000.0 && total < 1500.0){
-    total = total - (0.2*total);
-    cout << "O valor total é: R$" << total << endl;
-  }
-  else if (total >= 1500.0 && total < 2000.0) {
-    total = total - (0.3*total);
-    cout << "O valor total é: R$" << total << endl;
-  }
-  else if (total >= 2000.0) {
-    total = total - (3.5*total);
-    cout << "O valor total vale: R$" << total << endl;
-  }
-  else {
-    total = total + (0.8*total);
-    cout << "O valor total é: R$" << total << endl;
-  }
+	for (int i = 0; i < m; i++) {
+		cin >> a;
 
-  return 0;
+		for (int j = 0; j < a; j++) {
+			cin >> id;
+			partic.insert(id);
+		}
 
+		if ((i+1) >= r) {
+			bool ok = false;
+			for (it = partic.begin(); it != partic.end(); it++) {
+				if (infec.find(*it) != infec.end()) {
+					ok = true;
+					break;
+				}
+			}
+			if (ok) {
+				for (it = partic.begin(); it != partic.end(); it++)
+					infec.insert(*it);
+			}
+		}
+
+		partic.clear();
+	}
+
+	cout << infec.size() << endl;
+
+	return 0;
 }

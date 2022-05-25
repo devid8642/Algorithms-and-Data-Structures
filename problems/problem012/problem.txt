@@ -1,1 +1,1 @@
-Faça um algoritmo para ler um valor X e calcular Y = X+2X+3X+4X+5X+...+20X.
+Problem: https://olimpiada.ic.unicamp.br/pratique/pj/2020/f2/lesma/

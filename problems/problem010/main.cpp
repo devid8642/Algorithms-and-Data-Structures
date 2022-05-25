@@ -3,24 +3,23 @@
 using namespace std;
 
 int main() {
-  int num;
-  float result;
+	int d, e;
 
-  cout << "Digite um número: ";
-  cin >> num;
-  result = num;
+	cin >> d;
 
-  for (int i = 1; i <= num; i++) {
+	e = d-3;
+	
+	if (e >= 8) {
+		d = e/8;
+		e -= 8*d;
+	}
 
-    if (num % i == 0 && i != 1 && i != num) {
-      cout << "Ele não é primo: " << result/2 << endl;
-      return 0;
-    }
-    
-  }
+	if (e == 3)
+		cout << 1 << endl;
+	else if (e == 4)
+		cout << 2 << endl;
+	else
+		cout << 3 << endl;
 
-  cout << "Ele é primo: " << result*2 << endl; 
-
-  return 0;
-
+	return 0;
 }

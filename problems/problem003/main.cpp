@@ -1,24 +1,31 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int main() {
-  float temp;
+	string m;
+	int diver = 0, chat = 0;
 
-  cout << "Digite a temperatura atual (em celsius): ";
-  cin >> temp;
+	getline(cin, m);
 
-  if (temp <= 15.0)
-    cout << "Está muito frio!";
-  else if (temp <= 23.0)
-    cout << "Está frio!";
-  else if (temp <= 26.0)
-    cout << "Está agradável.";
-  else if (temp <= 30)
-    cout << "Está calor.";
-  else if (temp >= 31)
-    cout << "Está muito quente!";
+	for (int i = 0; i < (int)m.size(); i++) {
+		if (i != 0 && i != (int)m.size()-1) {
+			if (m[i] == '-' && m[i-1] == ':') {
+				if (m[i+1] == ')')
+					diver++;
+				else if (m[i+1] == '(')
+					chat++;
+			}
+		}
+	}
 
-  return 0;
+	if (diver > chat)
+		cout << "divertido" << endl;
+	else if (chat > diver)
+		cout << "chateado" << endl;
+	else
+		cout << "neutro" << endl;
 
+	return 0;
 }

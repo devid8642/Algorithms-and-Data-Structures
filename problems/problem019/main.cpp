@@ -2,55 +2,110 @@
 
 using namespace std;
 
+
 int main() {
-    int n, d;
-    vector<vector<int>> nums;
-    vector<int> ks;
-    vector<int> ds;
+	int l, c, p;
+	char tabu[11][11];
+	int resp = 0;
 
-    cin >> n >> d;
+	cin >> l >> c;
+	cin >> p;
+	
+	for (int i = 0; i < l; i++) {
+		for (int j = 0; j < c; j++)
+			tabu[i][j] = '0';
+	}
 
-    while (n != 0 && d != 0) {
-        string x;
-        vector<int> num;
-        int k =  n - d;
-        ks.push_back(k);
-        ds.push_back(d);
+	for (int i = 0; i < p; i++) {
+		int x, y;
+		cin >> x >> y;
+		tabu[x-1][y-1] = 'p';
+	}
 
-        cin >> x;
+	for (int i = 0; i < l; i++) {
+		for (int j = 0; j < c; j++) {
+			char peca = tabu[i][j];
+			if (peca != 'p')
+				continue;
+			else {
+				if (j != 0) {
+					if (tabu[i][j-1] != 'p')
+						tabu[i][j-1] = 'b';
+				}
+				if (j != c-1) {
+					if (tabu[i][j+1] != 'p')
+						tabu[i][j+1] = 'b';
+				}
+				if (i != 0) {
+					if (tabu[i-1][j] != 'p')
+						tabu[i-1][j] = 'b';
+				}
+				if (i != l-1) {
+					if (tabu[i+1][j] != 'p')
+						tabu[i+1][j] = 'b';
+				}
+			}
+		}
+	}
 
-        for (int i = 0; i < (int)x.size(); i++) {
-            int k = x[i] - 48;
-            num.push_back(k);
-        }
+	for (int i = 0; i < l; i++) {
+		for (int j = 0; j < c; j++) {
+			char peca = tabu[i][j];
 
-        nums.push_back(num);
+			if (peca != 'b')
+				continue;
+			else {
+				int count_b = 0;
+				
+				if (j != 0) {
+					if (tabu[i][j-1] == 'b')
+						count_b++;
+				}
 
-        cin >> n >> d;
+				if (j != c-1) {
+					if (tabu[i][j+1] == 'b')
+						count_b++;
+				}
 
-    }
+				if (i != 0) {
+					if (tabu[i-1][j] == 'b')
+						count_b++;
+				}
 
-    for (int i = 0; i < (int)nums.size(); i++) {
-        vector<int> num = nums[i];
-        vector<int> n_num;
-        int k = ks[i];
-        int d = ds[i];
-        int l = 0;
+				if (i != l-1) {
+					if (tabu[i+1][j] == 'b')
+						count_b++;
+				}
 
-        for (int j = 0; j < (int)num.size(); j++) {
-            while (n_num.size() > 0 && num[j] > n_num.back() && l < d) {
-                n_num.pop_back();
-                l++;
-            }
-            if (n_num.size() < k)
-                n_num.push_back(num[j]);
-        }
+				if (count_b > 1)
+					tabu[i][j] = '0';
+				else {
+					if (j != 0)
+						tabu[i][j-1] = '0';
 
-        for (int j = 0; j < (int)n_num.size(); j++)
-            cout << n_num[j];
-        cout << endl;
-    }
+					if (j != c-1)
+						tabu[i][j+1] = '0';
 
-    return 0;
+					if (i != 0)
+						tabu[i-1][j] = '0';
+
+					if (i != l-1)
+						tabu[i+1][j] = '0';
+				}
+
+			}
+		}
+	}
+
+	for (int i = 0; i < l; i++) {
+		for (int j = 0; j < c; j++) {
+			if (tabu[i][j] == 'b')
+				resp++;
+		}
+	}	
+
+	cout << resp << endl;
+	
+	return 0;
 
 }

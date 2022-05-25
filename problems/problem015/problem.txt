@@ -1,2 +1,1 @@
-Escreva um programa que leia um valor correspondente ao número de jogadores de um time de vôlei. O
-programa deverá ler uma altura para cada um dos jogadores e, ao final, informar a altura média do time.
+Problem: https://olimpiada.ic.unicamp.br/pratique/pj/2019/f2/nota/

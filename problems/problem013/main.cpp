@@ -1,24 +1,28 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main() {
-  int n = 1, c = 0;
-  float s = 0;
-  
-  while (n != 0) {
-    cout << "Digite um número (0 para parar): ";
-    cin >> n;
-    
-    if (n % 2 == 0 && n != 0) {
-      s += n;
-      c++;
-    }
+	string p1, p2;
+	bool control = false;
 
-  }
+	cin >> p1 >> p2;
 
-  cout << "A média dos números pares vale: " << s/c << endl;
+	for (int i = (int)p1.size()-1; i > -1; i--) {
+		for (int j = (int)p2.size()-1; j > -1; j--) {
+			if (p1[i] == p2[j]) {
+				cout << i+1 << " " << j+1 << endl;
+				control = true;
+				break;		
+			}
+		}
 
-  return 0;
+		if (control)
+			break;
+	}
 
+	if (!control)
+		cout << -1 << " " << -1 << endl;
+
+	return 0;
 }

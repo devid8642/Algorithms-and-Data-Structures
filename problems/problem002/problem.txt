@@ -1,2 +1,1 @@
-Faça um algoritmo que leia os 3 lados de uma forma geométrica e verifique se ele é
-um triângulo; se for, indique se ele é isósceles, equilátero ou escaleno.
+Problem: https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/tesouro/

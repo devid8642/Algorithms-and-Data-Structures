@@ -1,1 +1,1 @@
-Escrever um algoritmo que imprima a tabuada de um número informado pelo usuário.
+Problem: https://olimpiada.ic.unicamp.br/pratique/p2/2020/f1/irmaos/

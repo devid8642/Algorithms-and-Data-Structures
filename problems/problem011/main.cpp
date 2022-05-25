@@ -3,31 +3,13 @@
 using namespace std;
 
 int main() {
-  float num;
+	int a1, a2, r;
 
-  cout << "Digite um número: ";
-  cin >> num;
-  
-  cout << "TABUADA DA ADIÇÃO" << endl;
+	cin >> a1 >> a2;
 
-  for (int i = 1; i <= 10; i++)
-    cout << num << " + " << i << " = " << num+i << endl;
-  
-  cout << "TABUADA DA SUBTRAÇÃO" << endl;
+	r = a2-a1;
 
-  for (int i = 1; i <= 10; i++)
-    cout << num << " - " << i << " = " << num-i << endl;
-
-  cout << "TABUADA DA MULTIPLICAÇÃO" << endl;
-
-  for (int i = 1; i <= 10; i++)
-    cout << num << " x " << i << " = " << num*i << endl;
-
-  cout << "TABUADA DA DIVISÃO" << endl;
-
-  for (int i = 1; i <= 10; i++)
-    cout << num << " / " << i << " = " << num/i << endl;
-
-  return 0;
-
+	cout << a2+r << endl;
+	
+	return 0;
 }

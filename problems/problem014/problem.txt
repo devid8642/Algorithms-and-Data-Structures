@@ -1,3 +1,1 @@
-Uma turma possui N alunos, e para cada aluno tem-se uma média para cada disciplina. O professor de
-Matemática Led gostaria de saber a média geral de sua disciplina em uma turma. Faça um algoritmo para
-auxiliar a encontrar este valor.
+Problem: https://olimpiada.ic.unicamp.br/pratique/pj/2020/f2/pinos/

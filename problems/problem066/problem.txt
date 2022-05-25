@@ -1,0 +1,2 @@
+Faça um programa em que leia um número inteiro positivo, verifique se esse número é
+primo ou não. Se o número for primo, ele deve ser dobrado. Senão, ele deve ser dividido por 2.

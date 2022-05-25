@@ -1,2 +1,1 @@
-Faça um algoritmo que leia um número inteiro positivo, some todos os números de 1 a
-esse número, e mostre o resultado na tela.
+Problem: https://olimpiada.ic.unicamp.br/pratique/p1/2019/f1/idade

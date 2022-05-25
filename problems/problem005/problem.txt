@@ -1,12 +1,1 @@
-Um trabalhador da Clara’s Designs recebe o seu salário referente a cada hora
-trabalhada por dia de acordo com o seu nível. Se o trabalhador for diretor de criação, é 200,00 R$ por
-hora, se for o designer sênior, 150,00 R$ por hora, se for um designer júnior é de 85,70 R$, se for
-arte-finalista, 172,00 R$, e se for um designer freelancer, 100,00 R$. Calcule o salário dessa pessoa
-por mês e mostre na tela o resultado. O programa deve ler as horas trabalhadas e o número de cada
-cargo, o qual segue a tabela abaixo:
-
-[1] - Diretor de Criação
-[2] - Designer Sênior
-[3] - Designer Freelancer
-[4] - Designer Júnior
-[5] - Arte-finalista
+Problem: https://olimpiada.ic.unicamp.br/pratique/p1/2020/f1/piloto/

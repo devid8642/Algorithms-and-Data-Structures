@@ -1,7 +1,1 @@
-Faça um algoritmo que leia o número do pedido e a quantidade que a
-pessoa quiser comprar dele, no final deve mostrar na tela quanto deu essa compra. O cardápio é:
-
-[1] - Uma fatia de bolo 7,50 R$
-[2] - Um xícara pequena de café 2,35 R$
-[3] - Um copo grande de chá preto gelado 13,40 R$
-[4] - Um conjunto de biscoitos amanteigados 15,00 R$
+Problem: https://olimpiada.ic.unicamp.br/pratique/pj/2020/f1/camisetas/

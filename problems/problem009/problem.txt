@@ -1,2 +1,1 @@
-Faça um algoritmo que exiba os números de 50 até 1, que pule dois números para o
-próximo número, na tela. Deve também somar cada número exibido, calcular a sua média e exibí-la na tela.
+Problem: https://olimpiada.ic.unicamp.br/pratique/p1/2019/f1/nota/

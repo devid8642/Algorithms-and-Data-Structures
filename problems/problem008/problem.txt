@@ -1,1 +1,1 @@
-Faça um algoritmo que leia 10 números e mostre na tela quantos são pares e quantos são ímpares.
+Problem: https://olimpiada.ic.unicamp.br/pratique/p1/2019/f1/jogo/

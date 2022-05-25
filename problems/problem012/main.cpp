@@ -1,18 +1,24 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main() {
-  int n, s = 0;
+	int a, s, d;
+	int cont = 0;
 
-  cout << "Digite um número: ";
-  cin >> n;
+	cin >> a >> s >> d;
 
-  for (int i = 1; i <= 20; i++)
-    s += n*i;
+	while (a > 0) {
+		a -= s;
+		if (a <= 0) {
+			cont++;
+			break;
+		}
+		a += d;
+		cont++;
+	}
 
-  cout << "A soma vale: " << s << endl;
+	cout << cont << endl;
 
-  return 0;
-
+	return 0;
 }
