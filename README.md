@@ -11,12 +11,8 @@
 <p>Diretório dedicado a implementação das principais estruturas de dados (listas encadeadas, filas, pilhas etc).</p>
 
 ### Problems
-<p>Directory is dedicated to general troubleshooting.</p>
-<p>Diretório é dedicado à solução de problemas gerais</p>
-
-### OBI Problems
-<p>Directory dedicated to the solution of problems of <a href="https://olimpiada.ic.unicamp.br/" target="_blank" rel="noreferrer noopener">OBI</a> (Brazilian Olympics of Informatics).</p>
-<p>Diretório dedicado à solução de problemas da <a href="https://olimpiada.ic.unicamp.br/" target="_blank" rel="noreferrer noopener">OBI</a> (Olimpíada Brasileira de Informática).</p>
+<p>Directory with solution files and links to problems.</p>
+<p>Diretório com os arquivos de soluções e links para problemas.</p>
 
 ### Branchs
 
