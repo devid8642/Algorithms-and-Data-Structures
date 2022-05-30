@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int a, b;
+	
+	cin >> a >> b;
+	
+	if (a == b)
+		cout << "Iguais" << endl;
+	else
+		cout << "Diferentes" << endl;
+	
+	return 0;
+	
+}
