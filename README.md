@@ -23,8 +23,3 @@
 ## data-structures
 <p>In this branch I work on the implementation of the main data structures.</p>
 <p>Neste ramo eu trabalho na implementação das principais estruturas de dados.</p>
-
-<br><br>
-
-<p align="center"><b>"Always remember who you are and where you are."</b></p>
-<p align="center"><i>Tommy Shelby</i></p>
