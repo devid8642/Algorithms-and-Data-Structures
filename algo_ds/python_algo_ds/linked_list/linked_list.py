@@ -37,6 +37,10 @@ class LinkedList:
 
     def _get_node(self, index: int) -> Node:
         self._validate_index(index)
+        if index == 0:
+            return self._head
+        elif index == len(self) - 1:
+            return self._last
         current = self._head
 
         for _ in range(index):
