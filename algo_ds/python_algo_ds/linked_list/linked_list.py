@@ -2,7 +2,11 @@
 from __future__ import annotations
 from collections.abc import Iterable
 from typing import Any
-from nodes import Node
+
+if __name__ == '__main__':
+    from nodes import Node
+else:
+    from .nodes import Node
 
 
 class LinkedList:
@@ -23,6 +27,9 @@ class LinkedList:
 
     def __len__(self) -> int:
         return self._len
+
+    def is_empty(self) -> bool:
+        return len(self) == 0
 
     def _validate_index(self, index: int) -> None:
         if not 0 <= index < len(self):
@@ -45,11 +52,11 @@ class LinkedList:
 
         node.data = value
 
-    def get_head(self) -> Node:
-        return self._head
+    def get_head(self) -> Any:
+        return self._head.data
 
-    def get_last(self) -> Node:
-        return self._last
+    def get_last(self) -> Any:
+        return self._last.data
 
     def append(self, value: Any) -> None:
         new_node = Node(value)
@@ -96,7 +103,7 @@ class LinkedList:
 
             for i in range(index):
                 to_delete = to_delete.next
-                if i == index - 1:
+                if i == index - 2:
                     previous_to_delete = to_delete
 
             previous_to_delete.next = to_delete.next
