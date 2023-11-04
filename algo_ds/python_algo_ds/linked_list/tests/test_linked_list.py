@@ -89,7 +89,7 @@ class TestLinkedList(unittest.TestCase):
             self.lst.delete(11)
 
     def test_search_lst(self) -> None:
-        self.assertEqual(self.lst.search(0).data, 0)
+        self.assertEqual(self.lst.search(0), 0)
         self.assertEqual(self.lst.search(10), None)
 
 

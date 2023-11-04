@@ -110,12 +110,14 @@ class LinkedList:
 
         self._len -= 1
 
-    def search(self, value: Any) -> Node | None:
+    def search(self, value: Any) -> int | None:
         current = self._head
+        pos = 0
 
         while current:
             if current.data == value:
-                return current
+                return pos
             current = current.next
+            pos += 1
 
         return None
