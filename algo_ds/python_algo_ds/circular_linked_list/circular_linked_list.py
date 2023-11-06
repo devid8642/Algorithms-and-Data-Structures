@@ -7,9 +7,6 @@ from linked_list.linked_list import Node
 
 
 class CircularLinkedList(LinkedList):
-    def __init__(self) -> None:
-        super().__init__()
-
     def __iter__(self) -> Iterable:
         current = self._head
 
