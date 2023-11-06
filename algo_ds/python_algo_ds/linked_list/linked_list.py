@@ -80,6 +80,7 @@ class LinkedList:
     def disappend(self) -> None:
         self._last = self._get_node(len(self) - 2)
         self._last.next = None
+        self._len -= 1
 
     def insert(self, value: Any, index: int) -> None:
         self._validate_index(index)

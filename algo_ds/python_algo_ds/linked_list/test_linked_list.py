@@ -58,6 +58,18 @@ class TestLinkedList(unittest.TestCase):
             self.lst._get_node(len(self.lst) - 1)
         )
 
+    def test_disappend_lst(self) -> None:
+        old_len = len(self.lst)
+        expected_last = self.lst._get_node(len(self.lst) - 2)
+        self.lst.disappend()
+
+        self.assertNotEqual(self.lst.get_last(), 9)
+        self.assertEqual(
+            self.lst._get_node(len(self.lst) - 1),
+            expected_last
+        )
+        self.assertEqual(len(self.lst), old_len - 1)
+
     def test_insert_lst(self) -> None:
         previous_new_node = self.lst._get_node(1)
         expected_next = self.lst._get_node(2)
