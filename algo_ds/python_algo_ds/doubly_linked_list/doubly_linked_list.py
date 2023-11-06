@@ -2,10 +2,13 @@
 from __future__ import annotations
 from typing import Any
 from collections.abc import Iterable
-if __name__ == '__main__':
-    from nodes import DoublyNode
-else:
-    from .nodes import DoublyNode
+from linked_list.linked_list import Node
+
+
+class DoublyNode(Node):
+    def __int__(self, data: Any) -> None:
+        super().__init__(data)
+        self.previous: Node | None = None
 
 
 class DoublyLinkedList:

@@ -3,10 +3,14 @@ from __future__ import annotations
 from collections.abc import Iterable
 from typing import Any
 
-if __name__ == '__main__':
-    from nodes import Node
-else:
-    from .nodes import Node
+
+class Node:
+    def __init__(self, data: Any) -> None:
+        self.data: Any = data
+        self.next: Node | None = None
+
+    def __str__(self) -> str:
+        return f'{self.data}'
 
 
 class LinkedList:
