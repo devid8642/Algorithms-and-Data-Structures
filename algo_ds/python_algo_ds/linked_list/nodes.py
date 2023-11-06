@@ -10,3 +10,9 @@ class Node:
 
     def __str__(self) -> str:
         return f'{self.data}'
+
+
+class DoublyNode(Node):
+    def __int__(self, data: Any) -> None:
+        super().__init__(data)
+        self.previous: Node | None = None

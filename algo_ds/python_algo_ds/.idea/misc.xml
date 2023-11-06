@@ -4,4 +4,7 @@
     <option name="sdkName" value="Python 3.10 (python_algo_ds)" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (python_algo_ds)" project-jdk-type="Python SDK" />
+  <component name="PythonCompatibilityInspectionAdvertiser">
+    <option name="version" value="3" />
+  </component>
 </project>
