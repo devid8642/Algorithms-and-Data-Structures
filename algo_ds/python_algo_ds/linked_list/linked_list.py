@@ -77,6 +77,10 @@ class LinkedList:
 
         self._len += 1
 
+    def disappend(self) -> None:
+        self._last = self._get_node(len(self) - 2)
+        self._last.next = None
+
     def insert(self, value: Any, index: int) -> None:
         self._validate_index(index)
         new_node = Node(value)
@@ -103,8 +107,7 @@ class LinkedList:
         elif index == 0:
             self._head = self._head.next
         elif index == len(self) - 1:
-            self._last = self._get_node(len(self) - 2)
-            self._last.next = None
+            self.disappend()
         else:
             to_delete = self._head
             previous_to_delete = None
