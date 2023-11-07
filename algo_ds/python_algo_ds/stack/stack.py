@@ -36,7 +36,7 @@ class Stack:
         self._len += 1
 
     def pop(self) -> Any:
-        if len(self) > 0:
+        if not self.is_empty():
             node = self._top
             self._top = self._top.next
             self._len -= 1
@@ -44,6 +44,6 @@ class Stack:
         return None
 
     def peek(self) -> Any:
-        if len(self) > 0:
+        if not self.is_empty():
             return self._top.data
         return None
