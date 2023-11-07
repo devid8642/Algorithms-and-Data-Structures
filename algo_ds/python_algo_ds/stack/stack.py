@@ -23,6 +23,9 @@ class Stack:
     def __len__(self) -> int:
         return self._len
 
+    def _get_top(self) -> Node:
+        return self._top
+
     def is_empty(self) -> bool:
         return len(self) == 0
 
@@ -32,12 +35,12 @@ class Stack:
         self._top = new_node
         self._len += 1
 
-    def pop(self) -> Node | None:
+    def pop(self) -> Any:
         if len(self) > 0:
             node = self._top
             self._top = self._top.next
             self._len -= 1
-            return node
+            return node.data
         return None
 
     def peek(self) -> Any:
