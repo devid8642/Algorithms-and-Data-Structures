@@ -26,7 +26,10 @@ class TestStack(unittest.TestCase):
         self.assertTrue(stk.is_empty())
 
     def test_peek_stack(self) -> None:
+        empty_stack = Stack()
+
         self.assertEqual(self.stack.peek(), 9)
+        self.assertEqual(empty_stack.peek(), None)
 
     def test_push_stack(self) -> None:
         old_len = len(self.stack)
@@ -41,6 +44,7 @@ class TestStack(unittest.TestCase):
         self.assertEqual(len(self.stack), old_len + 1)
 
     def test_pop_stack(self) -> None:
+        empty_stack = Stack()
         old_top = self.stack._get_top()
         old_len = len(self.stack)
         returned_data = self.stack.pop()
@@ -52,6 +56,8 @@ class TestStack(unittest.TestCase):
         )
         self.assertEqual(returned_data, old_top.data)
         self.assertEqual(len(self.stack), old_len - 1)
+
+        self.assertEqual(empty_stack.pop(), None)
 
 
 if __name__ == '__main__':
