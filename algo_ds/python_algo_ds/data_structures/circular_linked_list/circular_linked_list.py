@@ -2,8 +2,8 @@
 from __future__ import annotations
 from collections.abc import Iterable
 from typing import Any
-from linked_list.linked_list import LinkedList
-from linked_list.linked_list import Node
+from data_structures.linked_list.linked_list import LinkedList
+from data_structures.linked_list.linked_list import Node
 
 
 class CircularLinkedList(LinkedList):

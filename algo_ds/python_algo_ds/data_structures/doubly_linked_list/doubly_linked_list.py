@@ -2,7 +2,7 @@
 from __future__ import annotations
 from typing import Any
 from collections.abc import Iterable
-from linked_list.linked_list import Node
+from data_structures.linked_list.linked_list import Node
 
 
 class DoublyNode(Node):

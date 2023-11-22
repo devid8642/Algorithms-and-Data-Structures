@@ -1,7 +1,7 @@
 """ Implementation of insertion sort https://en.wikipedia.org/wiki/Insertion_sort """
 from __future__ import annotations
 from typing import Any
-from test_sort_algorithms.test_sort import TestSortAlgorithms
+from algorithms.utils.test_sort import TestSortAlgorithms
 import unittest
 
 

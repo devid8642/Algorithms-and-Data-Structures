@@ -1,6 +1,6 @@
 """ Tests for circular linked list """
 import unittest
-from linked_list.test_linked_list import TestLinkedList
+from data_structures.linked_list.test_linked_list import TestLinkedList
 from .circular_linked_list import CircularLinkedList
 
 
