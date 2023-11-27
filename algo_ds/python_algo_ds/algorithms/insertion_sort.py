@@ -1,11 +1,12 @@
 """ Implementation of insertion sort https://en.wikipedia.org/wiki/Insertion_sort """
 from __future__ import annotations
 from typing import Any
-from algorithms.utils.test_sort import TestSortAlgorithms
+from utils.test_sort import TestSortAlgorithms
+from utils.type_comparable import TypeComparable
 import unittest
 
 
-def insertion_sort(arr: list[Any]) -> list[Any]:
+def insertion_sort(arr: list[TypeComparable]) -> list[TypeComparable]:
     for i in range(1, len(arr)):
         key = arr[i]
         j = i - 1

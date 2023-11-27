@@ -1,11 +1,13 @@
 """ Merge sort implementation """
 from __future__ import annotations
-from typing import Any
 from utils.test_sort import TestSortAlgorithms
+from utils.type_comparable import TypeComparable
 import unittest
 
 
-def merge(arr1: list[Any], arr2: list[Any]) -> list[Any]:
+def merge(
+        arr1: list[TypeComparable], arr2: list[TypeComparable]
+) -> list[TypeComparable]:
     new_arr = []
 
     while arr1 and arr2:
@@ -19,7 +21,7 @@ def merge(arr1: list[Any], arr2: list[Any]) -> list[Any]:
     return new_arr
 
 
-def merge_sort(arr: list[Any]) -> list[Any]:
+def merge_sort(arr: list[TypeComparable]) -> list[TypeComparable]:
     if len(arr) <= 1:
         return arr
     mid_index = len(arr) // 2

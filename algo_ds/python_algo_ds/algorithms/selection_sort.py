@@ -2,10 +2,11 @@
 from __future__ import annotations
 from typing import Any
 from utils.test_sort import TestSortAlgorithms
+from utils.type_comparable import TypeComparable
 import unittest
 
 
-def selection_sort(arr: list[Any]) -> list[Any]:
+def selection_sort(arr: list[TypeComparable]) -> list[TypeComparable]:
     for i in range(0, len(arr) - 1):
         pos_minor = i
 
