@@ -1,7 +1,7 @@
 """ Merge sort implementation """
 from __future__ import annotations
-from utils.test_sort import TestSortAlgorithms
-from utils.type_comparable import TypeComparable
+from algorithms.utils.test_sort import TestSortAlgorithms
+from algorithms.utils.type_comparable import TypeComparable
 import unittest
 
 
