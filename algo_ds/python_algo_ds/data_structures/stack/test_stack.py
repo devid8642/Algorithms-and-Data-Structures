@@ -1,5 +1,6 @@
-""" Tests for stack implementation """
+"""Tests for stack implementation"""
 import unittest
+
 from .stack import Stack
 
 
@@ -12,8 +13,7 @@ class TestStack(unittest.TestCase):
 
     def test_print_stack(self) -> None:
         self.assertEqual(
-            self.stack.__str__(),
-            '\n'.join(str(item) for item in self.stack)
+            self.stack.__str__(), '\n'.join(str(item) for item in self.stack)
         )
 
     def test_len_stack(self) -> None:
@@ -37,10 +37,7 @@ class TestStack(unittest.TestCase):
         self.stack.push(10)
 
         self.assertEqual(self.stack.peek(), 10)
-        self.assertEqual(
-            self.stack._get_top().next,
-            old_top
-        )
+        self.assertEqual(self.stack._get_top().next, old_top)
         self.assertEqual(len(self.stack), old_len + 1)
 
     def test_pop_stack(self) -> None:
@@ -50,10 +47,7 @@ class TestStack(unittest.TestCase):
         returned_data = self.stack.pop()
 
         self.assertNotEqual(self.stack.peek(), old_top.data)
-        self.assertEqual(
-            self.stack._get_top(),
-            old_top.next
-        )
+        self.assertEqual(self.stack._get_top(), old_top.next)
         self.assertEqual(returned_data, old_top.data)
         self.assertEqual(len(self.stack), old_len - 1)
 

@@ -1,7 +1,9 @@
-""" Implementation of a stack """
+"""Implementation of a stack"""
 from __future__ import annotations
-from typing import Any
+
 from collections.abc import Iterable
+from typing import Any
+
 from data_structures.linked_list.linked_list import Node
 
 

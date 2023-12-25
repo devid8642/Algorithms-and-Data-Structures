@@ -1,5 +1,6 @@
-""" Tests for doubly linked list implementation """
+"""Tests for doubly linked list implementation"""
 import unittest
+
 from .doubly_linked_list import DoublyLinkedList
 
 
@@ -12,8 +13,7 @@ class TestDoublyLinkedList(unittest.TestCase):
 
     def test_print_lst(self) -> None:
         self.assertEqual(
-            self.lst.__str__(),
-            ' <-> '.join(str(item) for item in self.lst)
+            self.lst.__str__(), ' <-> '.join(str(item) for item in self.lst)
         )
 
     def test_len_lst(self) -> None:
@@ -52,10 +52,7 @@ class TestDoublyLinkedList(unittest.TestCase):
 
         self.assertEqual(lst[0], 1)
         self.assertEqual(self.lst[10], 10)
-        self.assertEqual(
-            old_last.next,
-            self.lst._get_node(len(self.lst) - 1)
-        )
+        self.assertEqual(old_last.next, self.lst._get_node(len(self.lst) - 1))
         self.assertEqual(len(self.lst), old_len + 1)
 
     def test_insert_lst(self) -> None:
@@ -80,14 +77,8 @@ class TestDoublyLinkedList(unittest.TestCase):
         self.lst.delete(5)
 
         self.assertNotEqual(self.lst[5], 5)
-        self.assertEqual(
-            deleted_node_previous.next,
-            deleted_node_next
-        )
-        self.assertEqual(
-            deleted_node_next.previous,
-            deleted_node_previous
-        )
+        self.assertEqual(deleted_node_previous.next, deleted_node_next)
+        self.assertEqual(deleted_node_next.previous, deleted_node_previous)
         self.assertEqual(len(self.lst), old_len - 1)
 
         with self.assertRaises(IndexError):

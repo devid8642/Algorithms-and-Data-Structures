@@ -1,12 +1,16 @@
-""" Binary Search implementation """
+"""Binary Search implementation"""
 from __future__ import annotations
-from typing import Any
-from utils.type_comparable import TypeComparable
-from utils.test_search import TestSearchAlgorithms
+
 import unittest
+from typing import Any
+
+from utils.test_search import TestSearchAlgorithms
+from utils.type_comparable import TypeComparable
 
 
-def binary_search(sorted_collection: list[TypeComparable], value: Any) -> int | None:
+def binary_search(
+    sorted_collection: list[TypeComparable], value: Any
+) -> int | None:
     if sorted_collection != sorted(sorted_collection):
         raise ValueError('sorted_collection must be sorted in ascending order')
 

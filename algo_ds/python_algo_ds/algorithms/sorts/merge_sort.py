@@ -1,12 +1,14 @@
-""" Merge sort implementation """
+"""Merge sort implementation"""
 from __future__ import annotations
+
+import unittest
+
 from algorithms.utils.test_sort import TestSortAlgorithms
 from algorithms.utils.type_comparable import TypeComparable
-import unittest
 
 
 def merge(
-        arr1: list[TypeComparable], arr2: list[TypeComparable]
+    arr1: list[TypeComparable], arr2: list[TypeComparable]
 ) -> list[TypeComparable]:
     new_arr = []
 

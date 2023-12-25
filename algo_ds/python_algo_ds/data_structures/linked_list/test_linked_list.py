@@ -1,7 +1,9 @@
-""" Tests for linked list implementation """
+"""Tests for linked list implementation"""
 from __future__ import annotations
-from .linked_list import LinkedList
+
 import unittest
+
+from .linked_list import LinkedList
 
 
 class TestLinkedList(unittest.TestCase):
@@ -13,8 +15,7 @@ class TestLinkedList(unittest.TestCase):
 
     def test_print_lst(self) -> None:
         self.assertEqual(
-            self.lst.__str__(),
-            ' -> '.join(str(item) for item in self.lst)
+            self.lst.__str__(), ' -> '.join(str(item) for item in self.lst)
         )
 
     def test_len_lst(self) -> None:
@@ -53,10 +54,7 @@ class TestLinkedList(unittest.TestCase):
 
         self.assertEqual(self.lst[10], 10)
         self.assertEqual(len(self.lst), old_len + 1)
-        self.assertEqual(
-            old_last.next,
-            self.lst._get_node(len(self.lst) - 1)
-        )
+        self.assertEqual(old_last.next, self.lst._get_node(len(self.lst) - 1))
 
     def test_disappend_lst(self) -> None:
         old_len = len(self.lst)
@@ -64,10 +62,7 @@ class TestLinkedList(unittest.TestCase):
         self.lst.disappend()
 
         self.assertNotEqual(self.lst.get_last(), 9)
-        self.assertEqual(
-            self.lst._get_node(len(self.lst) - 1),
-            expected_last
-        )
+        self.assertEqual(self.lst._get_node(len(self.lst) - 1), expected_last)
         self.assertEqual(len(self.lst), old_len - 1)
 
     def test_insert_lst(self) -> None:
@@ -91,10 +86,7 @@ class TestLinkedList(unittest.TestCase):
         self.lst.delete(5)
 
         self.assertNotEqual(self.lst[5], 5)
-        self.assertEqual(
-            previous_deleted_node.next,
-            expected_next_node
-        )
+        self.assertEqual(previous_deleted_node.next, expected_next_node)
         self.assertEqual(len(self.lst), old_len - 1)
 
         with self.assertRaises(IndexError):

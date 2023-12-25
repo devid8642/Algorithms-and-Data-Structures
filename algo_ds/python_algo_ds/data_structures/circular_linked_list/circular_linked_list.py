@@ -1,9 +1,10 @@
-""" Implementation of a circular linked list """
+"""Implementation of a circular linked list"""
 from __future__ import annotations
+
 from collections.abc import Iterable
 from typing import Any
-from data_structures.linked_list.linked_list import LinkedList
-from data_structures.linked_list.linked_list import Node
+
+from data_structures.linked_list.linked_list import LinkedList, Node
 
 
 class CircularLinkedList(LinkedList):

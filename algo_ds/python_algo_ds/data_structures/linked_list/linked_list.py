@@ -1,5 +1,6 @@
-""" Implementation of a linked list (https://en.wikipedia.org/wiki/Linked_list)  """
+"""Implementation of a linked list (https://en.wikipedia.org/wiki/Linked_list)"""
 from __future__ import annotations
+
 from collections.abc import Iterable
 from typing import Any
 

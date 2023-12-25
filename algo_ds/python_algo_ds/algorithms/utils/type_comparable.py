@@ -1,5 +1,6 @@
-""" Generic type comparable for lists """
+"""Generic type comparable for lists"""
 from __future__ import annotations
+
 from typing import Any, Protocol, TypeVar
 
 

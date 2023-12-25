@@ -1,6 +1,8 @@
-""" Tests for circular linked list """
+"""Tests for circular linked list"""
 import unittest
+
 from data_structures.linked_list.test_linked_list import TestLinkedList
+
 from .circular_linked_list import CircularLinkedList
 
 
@@ -18,13 +20,9 @@ class TestCircularLinkedList(TestLinkedList):
 
         self.assertEqual(self.lst[10], 10)
         self.assertEqual(len(self.lst), old_len + 1)
+        self.assertEqual(old_last.next, self.lst._get_node(len(self.lst) - 1))
         self.assertEqual(
-            old_last.next,
-            self.lst._get_node(len(self.lst) - 1)
-        )
-        self.assertEqual(
-            self.lst._get_node(len(self.lst) - 1).next,
-            self.lst._get_node(0)
+            self.lst._get_node(len(self.lst) - 1).next, self.lst._get_node(0)
         )
 
     def test_disappend_lst(self) -> None:
@@ -33,14 +31,8 @@ class TestCircularLinkedList(TestLinkedList):
         self.lst.disappend()
 
         self.assertNotEqual(self.lst.get_last(), 9)
-        self.assertEqual(
-            self.lst._get_node(len(self.lst) - 1),
-            expected_last
-        )
-        self.assertEqual(
-            expected_last.next,
-            self.lst._get_node(0)
-        )
+        self.assertEqual(self.lst._get_node(len(self.lst) - 1), expected_last)
+        self.assertEqual(expected_last.next, self.lst._get_node(0))
         self.assertEqual(len(self.lst), old_len - 1)
 
 

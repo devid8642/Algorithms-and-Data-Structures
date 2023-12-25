@@ -1,5 +1,6 @@
-""" Tests for queue implementation """
+"""Tests for queue implementation"""
 import unittest
+
 from .queue import Queue
 
 
@@ -12,8 +13,7 @@ class TestQueue(unittest.TestCase):
 
     def test_print_q(self) -> None:
         self.assertEqual(
-            self.q.__str__(),
-            ' -> '.join(str(item) for item in self.q)
+            self.q.__str__(), ' -> '.join(str(item) for item in self.q)
         )
 
     def test_len_q(self) -> None:
@@ -41,10 +41,7 @@ class TestQueue(unittest.TestCase):
         self.q.put(10)
 
         self.assertEqual(self.q._get_last().data, 10)
-        self.assertEqual(
-            old_last.next,
-            self.q._get_last()
-        )
+        self.assertEqual(old_last.next, self.q._get_last())
         self.assertEqual(len(self.q), old_len + 1)
 
     def test_remove_q(self) -> None:
@@ -54,10 +51,7 @@ class TestQueue(unittest.TestCase):
         returned_data = self.q.remove()
 
         self.assertNotEqual(self.q.get(), old_first.data)
-        self.assertEqual(
-            old_first.next,
-            self.q._get_first()
-        )
+        self.assertEqual(old_first.next, self.q._get_first())
         self.assertEqual(old_first.data, returned_data)
         self.assertEqual(len(self.q), old_len - 1)
 

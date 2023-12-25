@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "python-algo-ds"
+version = "0.1.0"
+description = ""
+authors = ["Dêvid Teófilo <nnick4673@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+taskipy = "^1.12.2"
+blue = "^0.9.1"
+ruff = "^0.1.9"
+isort = "^5.13.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 79
+exclude = ['.venv']
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.taskipy.tasks]
+lint = 'ruff . && blue --check . --diff'
+format = 'blue .  && isort .'

@@ -1,8 +1,10 @@
-""" Implementation of a linear search """
+"""Implementation of a linear search"""
 from __future__ import annotations
-from typing import Any
-from utils.test_search import TestSearchAlgorithms
+
 import unittest
+from typing import Any
+
+from utils.test_search import TestSearchAlgorithms
 
 
 def linear_search(arr: list[Any], target: Any) -> int | None:

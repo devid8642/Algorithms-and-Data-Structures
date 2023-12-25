@@ -1,9 +1,12 @@
-""" Two pointers implementation """
+"""Two pointers implementation"""
 from __future__ import annotations
+
 import unittest
 
 
-def two_pointers(sorted_collection: list[int], target_sum: int) -> tuple[int, int] | None:
+def two_pointers(
+    sorted_collection: list[int], target_sum: int
+) -> tuple[int, int] | None:
     left = 0
     right = len(sorted_collection) - 1
 
