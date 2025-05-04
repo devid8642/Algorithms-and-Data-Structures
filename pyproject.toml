@@ -1,0 +1,13 @@
+[project]
+name = "algorithms-and-data-structures"
+version = "0.1.0"
+description = "My collection of solutions to DSA problems"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "taskipy>=1.14.1",
+]
+
+[tool.taskipy.tasks]
+new-problem = "python create_problem.py"
